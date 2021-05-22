@@ -68,6 +68,17 @@ h2 {
 .grid-item2 li {
   list-style-type: circle;
 }
+@media screen and (max-width: 800px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 2fr;
+  }
+  .grid-item2,
+  .grid-item1 {
+    grid-column: 1/2;
+    text-align: left;
+  }
+}
 /* education */
 .education {
   background-image: url(../images/o\ o\ o\ _\ _\ _.gif);

@@ -15,7 +15,7 @@ ul {
 section,
 header,
 footer {
-  font-size: 200%;
+  font-size: 4vw;
 }
 h2 {
   text-decoration: underline;
@@ -24,21 +24,27 @@ h2 {
 /* intro styles */
 .intro {
   padding: 0%;
+  perspective: 100vw;
 }
 .intro h1 {
-  font-size: 300%;
+  font-size: 10vw;
   font-weight: 600;
   margin-bottom: 5px;
+  margin-top: 3vw;
   padding: 1%;
 }
 .intro h2 {
-  font-size: 150%;
+  font-size: 6vw;
   font-style: oblique;
   text-decoration: none;
   padding: unset;
+  animation: swing 3s ease-in-out 1s infinite both;
 }
 .intro p {
-  font-size: 100%;
+  font-size: 4vw;
+}
+.intro a:hover {
+  font-size: larger;
 }
 /* projects */
 .projects {
@@ -76,7 +82,7 @@ h2 {
   .grid-item2,
   .grid-item1 {
     grid-column: 1/2;
-    text-align: left;
+    text-align: justify;
   }
 }
 /* education */
@@ -111,4 +117,27 @@ h2 {
 .links a:hover {
   color: blanchedalmond;
   font-size: larger;
+}
+
+@keyframes swing {
+  0% {
+    /* transform: rotatey(40deg); */
+    opacity: 0%;
+  }
+  25% {
+    /* transform: rotatey(0deg); */
+    opacity: 50%;
+  }
+  50% {
+    /* transform: rotatey(-40deg); */
+    opacity: 100%;
+  }
+  85% {
+    /* transform: rotatey(0deg); */
+    opacity: 50%;
+  }
+  100% {
+    /* transform: rotatey(40deg); */
+    opacity: 0%;
+  }
 }
